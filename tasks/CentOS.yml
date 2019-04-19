@@ -17,3 +17,5 @@
   when: java_implementation == "oracle"
   tags:
     - java
+  register: pkg_result
+  until: pkg_result is success

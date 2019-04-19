@@ -9,6 +9,8 @@
   when: java_implementation == "openjdk" and java_openjdk_use_ppa
   tags:
     - java
+  register: pkg_result
+  until: pkg_result is success
 
 - name: Install OpenJDK Java
   become: yes
@@ -19,6 +21,8 @@
   when: java_implementation == "openjdk" and not java_openjdk_jre_only|bool
   tags:
     - java
+  register: pkg_result
+  until: pkg_result is success
 
 - name: Install OpenJDK Java Runtime Environment only
   become: yes
@@ -29,6 +33,8 @@
   when: java_implementation == "openjdk" and java_openjdk_jre_only|bool
   tags:
     - java
+  register: pkg_result
+  until: pkg_result is success
 
 - name: Add Web Upd8 Oracle Java PPA
   become: yes
@@ -38,6 +44,8 @@
   when: java_implementation == "oracle"
   tags:
     - java
+  register: pkg_result
+  until: pkg_result is success
 
 - name: Accept Oracle Java license
   become: yes
@@ -59,6 +67,8 @@
   when: java_implementation == "oracle"
   tags:
     - java
+  register: pkg_result
+  until: pkg_result is success
 
 - name: Install Oracle JCE Policy
   become: yes
@@ -69,3 +79,5 @@
   when: java_implementation == "oracle" and java_oracle_install_jce_policy
   tags:
     - java
+  register: pkg_result
+  until: pkg_result is success

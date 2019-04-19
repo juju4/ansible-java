@@ -19,13 +19,15 @@
 - include: java-home.yml
 
 - block:
-    - set_fact:
+    - name: Set fact java_path - openjdk
+      set_fact:
         java_path: "{{ java_openjdk_path }}"
       when: java_implementation == "openjdk"
       tags:
         - java
 
-    - set_fact:
+    - name: Set fact java_path - oracle
+      set_fact:
         java_path: "{{ java_oracle_path }}"
       when: java_implementation == "oracle"
       tags:
