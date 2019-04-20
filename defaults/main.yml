@@ -13,4 +13,4 @@ java_oracle_version: 8
 java_oracle_install_jce_policy: false
 ## rhel from upstream, http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 java_oracle_version_long: 1.8.0_211
-java_oracle_archive_url: 'https://download.oracle.com/otn/java/jdk/8u211-b12/478a62b7d4e34b78b671c754eaaf38ab/jdk-8u211-linux-x64.rpm'
+java_oracle_archive_url: 'https://download.oracle.com/otn-pub/java/jdk/8u211-b12/478a62b7d4e34b78b671c754eaaf38ab/jdk-8u211-linux-x64.rpm'
