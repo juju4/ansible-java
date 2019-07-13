@@ -1,3 +1,4 @@
+[DEPRECATED/UNMAINTAINED. Upstream role is. main interest of this role was option for oracle java but this is not valid anymore with Oracle Java license change of Apr 2019]
 java
 ====
 
